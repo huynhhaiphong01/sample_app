@@ -1,0 +1,1332 @@
+Started GET "/" for ::1 at 2023-03-07 12:36:02 +0700
+  
+ActiveRecord::ConnectionNotEstablished (Access denied for user 'root'@'localhost'):
+  
+activerecord (6.1.7.2) lib/active_record/connection_adapters/mysql2_adapter.rb:45:in `rescue in new_client'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/mysql2_adapter.rb:39:in `new_client'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.2) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.2) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.2) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.2) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.2) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (103.2ms)[0m  [1m[35mCREATE DATABASE `sample_app2_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (70.6ms)[0m  [1m[35mCREATE DATABASE `sample_app2_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for ::1 at 2023-03-07 14:29:55 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 24.4ms | Allocations: 505)
+Completed 200 OK in 48ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 4131)
+
+
+Started GET "/statics_page/home" for ::1 at 2023-03-07 14:30:42 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/statics_page/home"):
+  
+Started GET "/static_pages/home" for ::1 at 2023-03-07 14:30:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 151)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/haiphong/Documents/RoR/Ruby/sample_app2/public/packs
+[Webpacker] Hash: 804a8059a304061a3e74
+Version: webpack 4.46.0
+Time: 4091ms
+Built at: 03/07/2023 2:31:08 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-271cf8931bb708d2d8bb.js    121 KiB  application  [emitted] [immutable]  application
+js/application-271cf8931bb708d2d8bb.js.map    133 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-271cf8931bb708d2d8bb.js js/application-271cf8931bb708d2d8bb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 493 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 11828.0ms | Allocations: 14861)
+Completed 200 OK in 11834ms (Views: 11831.4ms | ActiveRecord: 0.0ms | Allocations: 16350)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-07 14:31:16 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.7ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3845)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4584)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-07 14:37:28 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 3.0ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3776)
+Completed 200 OK in 27ms (Views: 23.6ms | Allocations: 5123)
+
+
+Started GET "/" for ::1 at 2023-03-07 14:53:33 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3339)
+Completed 200 OK in 10ms (Views: 9.0ms | Allocations: 4272)
+
+
+Started GET "/" for ::1 at 2023-03-07 14:53:33 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2992)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 3474)
+
+
+Started GET "/" for ::1 at 2023-03-07 14:53:36 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2997)
+Completed 200 OK in 12ms (Views: 10.9ms | Allocations: 3433)
+
+
+Started GET "/" for ::1 at 2023-03-07 15:15:55 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3531)
+Completed 200 OK in 34ms (Views: 30.9ms | Allocations: 5012)
+
+
+Started GET "/" for ::1 at 2023-03-07 15:15:56 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2996)
+Completed 200 OK in 13ms (Views: 11.9ms | Allocations: 3478)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-07 15:16:30 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.9ms | Allocations: 646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3598)
+Completed 200 OK in 12ms (Views: 9.9ms | Allocations: 4165)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-07 15:16:33 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3109)
+Completed 200 OK in 21ms (Views: 18.6ms | Allocations: 3553)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-07 15:25:32 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.8ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3717)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 4484)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-03-07 15:25:36 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2997)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 3479)
+
+
+Started GET "/" for ::1 at 2023-03-08 13:40:39 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 17.8ms | Allocations: 410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 202.3ms | Allocations: 18551)
+Completed 200 OK in 220ms (Views: 206.0ms | ActiveRecord: 0.0ms | Allocations: 22215)
+
+
+Started GET "/" for ::1 at 2023-03-08 14:06:29 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3804)
+Completed 200 OK in 24ms (Views: 20.3ms | Allocations: 5282)
+
+
+Started GET "/" for ::1 at 2023-03-08 14:08:26 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3804)
+Completed 200 OK in 20ms (Views: 16.1ms | Allocations: 5200)
+
+
+Started GET "/" for ::1 at 2023-03-08 14:08:37 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3273)
+Completed 200 OK in 19ms (Views: 16.2ms | Allocations: 3775)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-08 14:08:41 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 37.0ms | Allocations: 759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 3851)
+Completed 200 OK in 46ms (Views: 44.5ms | Allocations: 4418)
+
+
+Started GET "/PartialsController/edit" for ::1 at 2023-03-08 14:09:46 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/PartialsController/edit"):
+  
+Started GET "/partials/edit" for ::1 at 2023-03-08 14:10:11 +0700
+Processing by PartialsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/edit.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.7ms | Allocations: 152)
+  Rendered partials/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4148)
+Completed 200 OK in 19ms (Views: 16.5ms | Allocations: 5623)
+
+
+Started GET "/partials/new" for ::1 at 2023-03-08 14:10:20 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered partials/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3316)
+Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 3929)
+
+
+Started GET "/partials/new" for ::1 at 2023-03-08 14:13:58 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.6ms | Allocations: 156)
+  Rendered partials/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4096)
+Completed 200 OK in 14ms (Views: 12.8ms | Allocations: 5571)
+
+
+Started GET "/partials/new" for ::1 at 2023-03-08 14:14:42 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 5.4ms | Allocations: 1912)
+  Rendered partials/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2262)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2340)
+Completed 500 Internal Server Error in 19ms (Allocations: 3699)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/haiphong/Documents/RoR/Ruby/sample_app2/app/views"
+  * "/home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/actiontext-6.1.7.2/app/views"
+  * "/home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.7.2/app/views"
+):
+    1: <p> Zone: <%= zone %>
+    2: <p> Date: <%= date %>
+    3: <%= render "header" %>
+  
+app/views/partials/_form.html.erb:3
+app/views/partials/new.html.erb:2
+Started GET "/partials/new" for ::1 at 2023-03-08 14:18:20 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.9ms | Allocations: 156)
+  Rendered partials/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 503)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5219)
+Completed 500 Internal Server Error in 25ms (Allocations: 6572)
+
+
+  
+ActionView::Template::Error (Missing partial partial/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/haiphong/Documents/RoR/Ruby/sample_app2/app/views"
+  * "/home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/actiontext-6.1.7.2/app/views"
+  * "/home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.7.2/app/views"
+):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= render "partial/form" %>
+    15:     <header class="navbar navbar-fixed-top navbar-inverse">
+    16:       <div class="container">
+    17:           <%= link_to "sample app", '#', id: "logo" %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/partials/new" for ::1 at 2023-03-08 14:18:36 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 2.7ms | Allocations: 156)
+  Rendered partials/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 503)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_form.html.erb (Duration: 9.8ms | Allocations: 4180)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 8400)
+Completed 500 Internal Server Error in 42ms (Allocations: 9761)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `zone' for #<ActionView::Base:0x00000000009f60>):
+    1: <p> Zone: <%= zone %>
+    2: <p> Date: <%= date %>
+  
+app/views/partials/_form.html.erb:1
+app/views/layouts/application.html.erb:14
+Started GET "/partials/new" for ::1 at 2023-03-08 14:20:55 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.8ms | Allocations: 156)
+  Rendered partials/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 503)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4141)
+Completed 200 OK in 22ms (Views: 19.1ms | Allocations: 5531)
+
+
+Started GET "/partials/new" for ::1 at 2023-03-08 14:24:11 +0700
+Processing by PartialsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/new.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.5ms | Allocations: 164)
+  Rendered partials/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4111)
+Completed 200 OK in 12ms (Views: 10.8ms | Allocations: 5601)
+
+
+Started GET "/partials/edit" for ::1 at 2023-03-08 14:24:19 +0700
+Processing by PartialsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/edit.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered partials/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3323)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 3943)
+
+
+  [1m[36mProduct Load (5.2ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[35m (378.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (308.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('6019767684805735455', 0)[0m
+  [1m[35m (20.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230308073050)
+  [1m[35m (629.9ms)[0m  [1m[35mCREATE TABLE `products` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (26.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230308073050')[0m
+  [1m[36mTRANSACTION (68.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-03-08 07:34:14.378457', '2023-03-08 07:34:14.378457')[0m
+  [1m[36mTRANSACTION (52.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (43.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6019767684805735455')[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Product{i}', '2023-03-08 07:36:07.267162', '2023-03-08 07:36:07.267162')[0m
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Product{i}', '2023-03-08 07:36:07.312507', '2023-03-08 07:36:07.312507')[0m
+  [1m[36mTRANSACTION (53.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Product{i}', '2023-03-08 07:36:07.369005', '2023-03-08 07:36:07.369005')[0m
+  [1m[36mTRANSACTION (65.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.1ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Product{i}', '2023-03-08 07:36:07.438130', '2023-03-08 07:36:07.438130')[0m
+  [1m[36mTRANSACTION (60.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Product{i}', '2023-03-08 07:36:07.505934', '2023-03-08 07:36:07.505934')[0m
+  [1m[36mTRANSACTION (60.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+Started GET "/partials/edit" for ::1 at 2023-03-08 14:38:02 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PartialsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering partials/edit.html.erb within layouts/application
+  Rendered partials/_form.html.erb (Duration: 0.4ms | Allocations: 199)
+  Rendered partials/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.7ms | Allocations: 24535)
+Completed 200 OK in 108ms (Views: 99.4ms | ActiveRecord: 0.0ms | Allocations: 28325)
+
+
+Started GET "/product/index" for ::1 at 2023-03-08 14:38:15 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/product/index"):
+  
+Started GET "/products/index" for ::1 at 2023-03-08 14:38:28 +0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+Completed 404 Not Found in 15ms (ActiveRecord: 7.4ms | Allocations: 3661)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=index):
+  
+app/controllers/products_controller.rb:63:in `set_product'
+Started GET "/products" for ::1 at 2023-03-08 14:38:54 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 4280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 7729)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 2.2ms | Allocations: 8918)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:42:47 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 116)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1925)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 5637)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 2.3ms | Allocations: 7070)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:42:48 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered products/_product.html.erb (Duration: 0.9ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 4541)
+Completed 200 OK in 27ms (Views: 21.5ms | ActiveRecord: 3.3ms | Allocations: 5051)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:43:37 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 4541)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 3.1ms | Allocations: 4997)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:43:38 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (5.2ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4548)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 5.2ms | Allocations: 5017)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:43:39 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 4541)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 3.3ms | Allocations: 4997)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:45:57 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 1.0ms | Allocations: 115)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 5633)
+Completed 200 OK in 36ms (Views: 27.7ms | ActiveRecord: 4.3ms | Allocations: 6999)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:45:58 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (5.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered products/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 4541)
+Completed 200 OK in 32ms (Views: 24.4ms | ActiveRecord: 5.5ms | Allocations: 5051)
+
+
+Started GET "/products" for ::1 at 2023-03-08 14:49:19 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 4197)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 4275)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 5604)
+
+
+  
+ActionView::Template::Error (undefined method `partial' for #<ActionView::Base:0x00000000009088>):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:       <%= render partial "product", collection: @products %>
+    15:   </tbody>
+    16: </table>
+    17: 
+  
+app/views/products/index.html.erb:14
+Started GET "/products" for ::1 at 2023-03-08 14:49:44 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 1.3ms | Allocations: 108)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 5323)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 2.3ms | Allocations: 6745)
+
+
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+Started GET "/products" for ::1 at 2023-03-08 14:52:30 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 0.4ms | Allocations: 132)
+  Rendered products/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 5096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 12130)
+Completed 200 OK in 44ms (Views: 27.6ms | ActiveRecord: 7.0ms | Allocations: 16495)
+
+
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+Started GET "/products" for ::1 at 2023-03-08 15:27:52 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 1.4ms | Allocations: 132)
+  Rendered products/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 5096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 12130)
+Completed 200 OK in 58ms (Views: 41.6ms | ActiveRecord: 7.3ms | Allocations: 16495)
+
+
+Started GET "/products" for ::1 at 2023-03-08 15:32:07 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 4.8ms | Allocations: 1073)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2494)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 6205)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 1.7ms | Allocations: 7672)
+
+
+Started GET "/products" for ::1 at 2023-03-08 15:40:04 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 3.3ms | Allocations: 940)
+  Rendered products/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 2700)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 6412)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 6.6ms | Allocations: 7838)
+
+
+Started GET "/products" for ::1 at 2023-03-08 15:40:05 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.9ms | Allocations: 735)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1720)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 4926)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 3.6ms | Allocations: 5451)
+
+
+Started GET "/products" for ::1 at 2023-03-08 15:40:47 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:15
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.0ms | Allocations: 940)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6076)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 1.3ms | Allocations: 7435)
+
+
+Started GET "/products" for ::1 at 2023-03-08 15:49:39 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.0ms | Allocations: 1024)
+  Rendered products/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 5170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 10511)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.1ms | Allocations: 12605)
+
+
+  
+ActionView::Template::Error (Missing partial products/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/haiphong/Documents/RoR/Ruby/sample_app2/app/views"
+  * "/home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/actiontext-6.1.7.2/app/views"
+  * "/home/haiphong/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.7.2/app/views"
+):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= render "header"%>
+    15:     <div class ="container">
+    16:       <%= yield %>
+    17:     <div>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/products" for ::1 at 2023-03-08 15:49:51 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 3.8ms | Allocations: 940)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 284)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 6415)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 2.8ms | Allocations: 7840)
+
+
+Started GET "/products" for ::1 at 2023-03-08 15:58:09 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.4ms | Allocations: 1167)
+  Rendered products/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 6018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 931.0ms | Allocations: 90580)
+Completed 200 OK in 945ms (Views: 929.7ms | ActiveRecord: 5.6ms | Allocations: 94942)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:02:34 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 4.2ms | Allocations: 782)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 700.1ms | Allocations: 55657)
+Completed 200 OK in 703ms (Views: 697.8ms | ActiveRecord: 3.4ms | Allocations: 56235)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:05:39 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.1ms | Allocations: 940)
+  Rendered products/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 683.3ms | Allocations: 58866)
+Completed 200 OK in 693ms (Views: 687.2ms | ActiveRecord: 2.6ms | Allocations: 60277)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:05:41 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (5.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 3.8ms | Allocations: 735)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 8753)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 5.0ms | Allocations: 9276)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:11:18 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 1.6ms | Allocations: 735)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2048)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 9025)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 4.4ms | Allocations: 9479)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:15:48 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 3.0ms | Allocations: 940)
+  Rendered products/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 10070)
+Completed 200 OK in 37ms (Views: 29.4ms | ActiveRecord: 2.8ms | Allocations: 11434)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:16:06 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4585)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4672)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5915)
+
+
+  
+ActionView::Template::Error (The asset "rails.svg" is not present in the asset pipeline.
+):
+     7: </h2>
+     8: <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+     9: </div>
+    10: <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
+    11:    "https://rubyonrails.org/" %>
+  
+app/views/static_pages/home.html.erb:10
+Started GET "/" for ::1 at 2023-03-08 16:16:30 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 8026)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 9434)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:17:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4231)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4309)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 5660)
+
+
+  
+ActionView::Template::Error (The asset "rails.svg" is not present in the asset pipeline.
+):
+     7: </h2>
+     8:    <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+     9: </div>
+    10: <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
+    11:    "https://rubyonrails.org/" %>
+  
+app/views/static_pages/home.html.erb:10
+Started GET "/" for ::1 at 2023-03-08 16:18:58 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 216.4ms | Allocations: 23163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 233.2ms | Allocations: 31209)
+Completed 200 OK in 244ms (Views: 235.8ms | ActiveRecord: 0.0ms | Allocations: 34991)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:19:18 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.0ms | Allocations: 1131)
+  Rendered products/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 5725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 12944)
+Completed 200 OK in 45ms (Views: 31.0ms | ActiveRecord: 10.9ms | Allocations: 14819)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:19:20 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.8ms | Allocations: 735)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1720)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 8705)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 3.5ms | Allocations: 9225)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:19:22 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 7517)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 7962)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:20:36 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 7513)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 7957)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:23:04 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 30.0ms | Allocations: 12970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 21035)
+Completed 200 OK in 55ms (Views: 47.2ms | ActiveRecord: 0.0ms | Allocations: 24818)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:23:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 7689)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 8238)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:26:41 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 971.7ms | Allocations: 59170)
+Completed 200 OK in 981ms (Views: 976.9ms | ActiveRecord: 0.0ms | Allocations: 60558)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:29:22 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 659)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 778.4ms | Allocations: 57727)
+Completed 200 OK in 782ms (Views: 779.8ms | Allocations: 58217)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:29:30 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 6.8ms | Allocations: 1131)
+  Rendered products/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 6618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 13798)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 8.9ms | Allocations: 15655)
+
+
+Started GET "/products" for ::1 at 2023-03-08 16:35:52 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.4ms | Allocations: 940)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 791.4ms | Allocations: 60902)
+Completed 200 OK in 797ms (Views: 794.4ms | ActiveRecord: 4.2ms | Allocations: 62322)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:35:55 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8114)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 9262)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:35:56 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 7646)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 8133)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:35:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 7646)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 8085)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:37:43 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 113)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 279)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 9304)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 10675)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:43:59 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 8019)
+Completed 200 OK in 16ms (Views: 15.5ms | Allocations: 8788)
+
+
+Started GET "/" for ::1 at 2023-03-08 16:45:03 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 279)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 9286)
+Completed 200 OK in 32ms (Views: 28.1ms | Allocations: 10704)
+
+
+Started GET "/contact" for ::1 at 2023-03-08 16:45:10 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/static_pages/contact" for ::1 at 2023-03-08 16:45:21 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.7ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 7599)
+Completed 200 OK in 23ms (Views: 21.2ms | Allocations: 8225)
+
+
+Started GET "/static_pages/contact" for ::1 at 2023-03-08 16:48:00 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7517)
+Completed 200 OK in 15ms (Views: 14.3ms | Allocations: 8284)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:48:04 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:49:47 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:49:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:50:51 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:50:51 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:50:52 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:51:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/help"):
+  
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:51:38 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 40.6ms | Allocations: 882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 280)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 9388)
+Completed 200 OK in 64ms (Views: 63.1ms | Allocations: 10871)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-08 16:59:31 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 289)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | Allocations: 32371)
+Completed 200 OK in 97ms (Views: 88.1ms | ActiveRecord: 0.0ms | Allocations: 36152)
+
+
+Started GET "/static_pages/help" for ::1 at 2023-03-08 17:15:44 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 289)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 220.0ms | Allocations: 55048)
+Completed 200 OK in 232ms (Views: 224.2ms | ActiveRecord: 0.0ms | Allocations: 58842)
+
+
+Started GET "/users" for ::1 at 2023-03-08 17:15:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2023-03-08 17:16:13 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2023-03-08 17:17:44 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 7767)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 9002)
+
+
+Started GET "/users/new" for ::1 at 2023-03-08 17:21:45 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 287)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 8764)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 10256)
+
+
+Started GET "/products" for ::1 at 2023-03-08 17:22:00 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:13
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 2.3ms | Allocations: 1096)
+  Rendered products/index.html.erb within layouts/application (Duration: 24.3ms | Allocations: 5897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 13407)
+Completed 200 OK in 49ms (Views: 32.7ms | ActiveRecord: 12.1ms | Allocations: 15271)
+
+
+Started GET "/" for ::1 at 2023-03-08 17:22:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 8321)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 9552)
+
+
+Started GET "/" for ::1 at 2023-03-08 17:22:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.2ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 124)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 7822)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.0ms | Allocations: 8308)
+
+
+Started GET "/" for ::1 at 2023-03-08 17:33:59 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 24.8ms | Allocations: 12053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 288)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 20922)
+Completed 200 OK in 55ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 24718)
+
+
+Started GET "/" for ::1 at 2023-03-08 17:34:01 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 8010)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 8559)
+
+
+Started GET "/" for ::1 at 2023-03-08 17:38:53 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 28.9ms | Allocations: 12053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 288)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 20922)
+Completed 200 OK in 61ms (Views: 51.0ms | ActiveRecord: 0.0ms | Allocations: 24718)
+
+
+Started GET "/" for ::1 at 2023-03-08 17:38:54 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 8020)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 8569)
+
+
+Started GET "/users/new" for ::1 at 2023-03-08 17:38:58 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 7717)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 8949)
+
+
