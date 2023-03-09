@@ -1426,3 +1426,1392 @@ Migrating to AddPasswordDigestToUsers (20230309080251)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+Started GET "/" for ::1 at 2023-03-09 16:35:23 +0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 360.6ms | Allocations: 12109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.4ms | Allocations: 118)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 1.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 437.8ms | Allocations: 20979)
+Completed 200 OK in 469ms (Views: 450.2ms | ActiveRecord: 0.0ms | Allocations: 24668)
+
+
+Started GET "/" for ::1 at 2023-03-09 16:35:24 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 14768)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 15252)
+
+
+Started GET "/users/show" for ::1 at 2023-03-09 16:35:31 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 5.3ms | Allocations: 3800)
+
+
+Started GET "/" for ::1 at 2023-03-09 16:35:31 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7951)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 8474)
+
+
+Started GET "/users/1" for ::1 at 2023-03-09 16:35:50 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 61.1ms | Allocations: 3518)
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | Allocations: 3606)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 3.7ms | Allocations: 8409)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= "${@user.name}, ${@user.email} %>
+):
+1:    <%= "${@user.name}, ${@user.email} %>
+  
+app/views/users/show.html.erb:3: unterminated string meets end of file
+app/views/users/show.html.erb:3: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:3: unterminated string meets end of file
+app/views/users/show.html.erb:3: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:3: unterminated string meets end of file
+app/views/users/show.html.erb:3: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:3: unterminated string meets end of file
+app/views/users/show.html.erb:3: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:3: unterminated string meets end of file
+app/views/users/show.html.erb:3: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/show.html.erb:3: unterminated string meets end of file
+app/views/users/show.html.erb:3: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/1" for ::1 at 2023-03-09 16:37:05 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.0ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 285)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 8763)
+Completed 200 OK in 37ms (Views: 26.9ms | ActiveRecord: 3.2ms | Allocations: 10892)
+
+
+Started GET "/users/1" for ::1 at 2023-03-09 16:37:20 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1122)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1202)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.4ms | Allocations: 3273)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= ${@user.name}, ${@user.email} %>
+):
+1:    <%= ${@user.name}, ${@user.email} %>
+  
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '{', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '{', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '{', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '{', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '{', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '{', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+Started GET "/users/1" for ::1 at 2023-03-09 16:37:32 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1124)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1203)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.5ms | Allocations: 3260)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= "${@user.name}", ${@user.email} %>
+):
+1:    <%= "${@user.name}", ${@user.email} %>
+  
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: `${' is not allowed as a global variable name
+app/views/users/show.html.erb:1: syntax error, unexpected '}', expecting ')'
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+Started GET "/users/1" for ::1 at 2023-03-09 16:37:41 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1126)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1205)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.2ms | Allocations: 3263)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= "${@user.name}", "${@user.email}" %>
+):
+1:    <%= "${@user.name}", "${@user.email}" %>
+  
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ',', expecting ')'
+Started GET "/users/1" for ::1 at 2023-03-09 16:38:10 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.2ms | Allocations: 113)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 285)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 8765)
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 2.3ms | Allocations: 10865)
+
+
+Started GET "/users/1" for ::1 at 2023-03-09 16:38:37 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1124)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1203)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.7ms | Allocations: 3260)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= @user.name, @user.email %>
+):
+1:    <%= @user.name, @user.email %>
+  
+app/views/users/show.html.erb:1: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:1: syntax error, unexpected ')', expecting '='
+app/views/users/show.html.erb:3: syntax error, unexpected `end', expecting ')'
+Started GET "/users/1" for ::1 at 2023-03-09 16:39:11 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.6ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 285)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 8769)
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 1.9ms | Allocations: 10889)
+
+
+Started GET "/users/1" for ::1 at 2023-03-09 16:39:27 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 113)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 285)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 8656)
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 2.1ms | Allocations: 10749)
+
+
+Started GET "/users/5" for ::1 at 2023-03-09 16:40:01 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms | Allocations: 1008)
+
+
+Started GET "/" for ::1 at 2023-03-09 16:40:01 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1037)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8288)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 9397)
+
+
+Started GET "/users/1" for ::1 at 2023-03-09 16:43:06 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 285)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 8875)
+Completed 200 OK in 36ms (Views: 19.4ms | ActiveRecord: 6.8ms | Allocations: 15491)
+
+
+Started GET "/users/1" for ::1 at 2023-03-09 16:46:45 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 115)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 285)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 1147.0ms | Allocations: 62812)
+Completed 200 OK in 1158ms (Views: 1150.3ms | ActiveRecord: 2.7ms | Allocations: 64909)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:02:56 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 116.0ms | Allocations: 4070)
+  Rendered layout layouts/application.html.erb (Duration: 786.6ms | Allocations: 35596)
+Completed 500 Internal Server Error in 799ms (ActiveRecord: 0.9ms | Allocations: 41464)
+
+
+  
+ActionView::Template::Error (Error: Mixin box-sizing is missing argument $boxmodel.
+        on line 122:14 of app/assets/stylesheets/custom.scss
+>>     @include box_sizing;
+
+   -------------^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:     <%= render "layouts/shim"%>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:122
+app/views/layouts/application.html.erb:9
+Started GET "/signup" for ::1 at 2023-03-09 18:04:21 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1886)
+  Rendered layout layouts/application.html.erb (Duration: 562.4ms | Allocations: 31557)
+Completed 500 Internal Server Error in 581ms (ActiveRecord: 6.5ms | Allocations: 37188)
+
+
+  
+ActionView::Template::Error (Error: Mixin box-sizing is missing argument $boxmodel.
+        on line 122:14 of app/assets/stylesheets/custom.scss
+>>     @include box_sizing;
+
+   -------------^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:     <%= render "layouts/shim"%>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:122
+app/views/layouts/application.html.erb:9
+Started GET "/signup" for ::1 at 2023-03-09 18:05:25 +0700
+  
+SyntaxError (/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:8: syntax error, unexpected '<', expecting `end'
+    <form accept-charset="UTF-8" a...
+    ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...m accept-charset="UTF-8" action="/signup" class="new_user" i...
+...                         ^~~~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:8: syntax error, unexpected `class', expecting `end'
+...="UTF-8" action="/signup" class="new_user" id="new_user" met...
+...                          ^~~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...n="/signup" class="new_user" id="new_user" method="post">
+...                             ^~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+..."new_user" id="new_user" method="post">
+...                         ^~~~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:9: syntax error, unexpected '<'
+        <input name="utf8" type="hidde...
+        ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+        <input name="utf8" type="hidden" value="&#x2713;" />
+                           ^~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+...name="utf8" type="hidden" value="&#x2713;" />
+...                          ^~~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:9: syntax error, unexpected '>'
+...pe="hidden" value="&#x2713;" />
+...                              ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+... name="authenticity_token" type="hidden" value="NNb6+J/j46Lc...
+...                           ^~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+...city_token" type="hidden" value="NNb6+J/j46LcrgYUC60wQ2titMu...
+...                          ^~~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:10: syntax error, unexpected '>'
+...60wQ2titMuJQ5lLqyAbnbAUkdo=" />
+...                              ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:13: syntax error, unexpected '<'
+        <label for="user_email">Email<...
+        ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:15: syntax error, unexpected '<'
+        <label for="user_password">Pas...
+        ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:17: syntax error, unexpected '<'
+        <label for="user_password_conf...
+        ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:19: syntax error, unexpected '<'
+        <input class="btn btn-primary"...
+        ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+...ut class="btn btn-primary" name="commit" type="submit" value...
+...                           ^~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+...btn-primary" name="commit" type="submit" value="Create my ac...
+...                           ^~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+...me="commit" type="submit" value="Create my account" />
+...                          ^~~~~
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:19: syntax error, unexpected '>'
+...t" value="Create my account" />
+...                              ^
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:21: unterminated regexp meets end of file
+/home/haiphong/Documents/sample_app/app/helpers/users_helper.rb:21: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/helpers/users_helper.rb:8: syntax error, unexpected '<', expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected `class', expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected '<'
+app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected '>'
+app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:10: syntax error, unexpected '>'
+app/helpers/users_helper.rb:13: syntax error, unexpected '<'
+app/helpers/users_helper.rb:15: syntax error, unexpected '<'
+app/helpers/users_helper.rb:17: syntax error, unexpected '<'
+app/helpers/users_helper.rb:19: syntax error, unexpected '<'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected '>'
+app/helpers/users_helper.rb:21: unterminated regexp meets end of file
+app/helpers/users_helper.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected '<', expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected `class', expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected '<'
+app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected '>'
+app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:10: syntax error, unexpected '>'
+app/helpers/users_helper.rb:13: syntax error, unexpected '<'
+app/helpers/users_helper.rb:15: syntax error, unexpected '<'
+app/helpers/users_helper.rb:17: syntax error, unexpected '<'
+app/helpers/users_helper.rb:19: syntax error, unexpected '<'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected '>'
+app/helpers/users_helper.rb:21: unterminated regexp meets end of file
+app/helpers/users_helper.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected '<', expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected `class', expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected '<'
+app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:9: syntax error, unexpected '>'
+app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:10: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:10: syntax error, unexpected '>'
+app/helpers/users_helper.rb:13: syntax error, unexpected '<'
+app/helpers/users_helper.rb:15: syntax error, unexpected '<'
+app/helpers/users_helper.rb:17: syntax error, unexpected '<'
+app/helpers/users_helper.rb:19: syntax error, unexpected '<'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected local variable or method, expecting `end'
+app/helpers/users_helper.rb:19: syntax error, unexpected '>'
+app/helpers/users_helper.rb:21: unterminated regexp meets end of file
+app/helpers/users_helper.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2023-03-09 18:12:24 +0700
+  [1m[35m (13.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 683.9ms | Allocations: 37084)
+  Rendered layout layouts/application.html.erb (Duration: 684.2ms | Allocations: 37182)
+Completed 500 Internal Server Error in 696ms (ActiveRecord: 0.0ms | Allocations: 40920)
+
+
+  
+ActionView::Template::Error (Error: Mixin box-sizing is missing argument $boxmodel.
+        on line 122:14 of app/assets/stylesheets/custom.scss
+>>     @include box_sizing;
+
+   -------------^
+):
+  
+app/assets/stylesheets/custom.scss:122
+Started GET "/" for ::1 at 2023-03-09 18:12:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 843.1ms | Allocations: 57198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 900.1ms | Allocations: 77904)
+Completed 200 OK in 902ms (Views: 901.1ms | ActiveRecord: 0.0ms | Allocations: 78469)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:13:06 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 11237)
+Completed 200 OK in 39ms (Views: 24.1ms | ActiveRecord: 4.7ms | Allocations: 17375)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:14:19 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 10213)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 11675)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:14:36 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 10222)
+Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 11667)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:15:27 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 10210)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 11633)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:15:29 +0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController
+Did you mean?  new
+               show):
+  
+actionpack (6.1.7.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/signup" for ::1 at 2023-03-09 18:15:31 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8529)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 9050)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:16:20 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 10104)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 11471)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:20:53 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 8895)
+Completed 200 OK in 32ms (Views: 22.4ms | ActiveRecord: 1.0ms | Allocations: 14074)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:25:10 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 244)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 10528)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.0ms | Allocations: 11982)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:25:14 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 784)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/signup" for ::1 at 2023-03-09 18:28:01 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1581)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 8999)
+Completed 200 OK in 30ms (Views: 19.5ms | ActiveRecord: 1.0ms | Allocations: 14181)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:28:02 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 5.4ms | Allocations: 2089)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 123)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 12997)
+Completed 200 OK in 46ms (Views: 29.1ms | ActiveRecord: 5.2ms | Allocations: 17902)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:29:22 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 43)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 734.1ms | Allocations: 60036)
+Completed 200 OK in 737ms (Views: 735.3ms | ActiveRecord: 0.0ms | Allocations: 60533)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:29:24 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.2ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 12491)
+Completed 200 OK in 49ms (Views: 28.0ms | ActiveRecord: 7.4ms | Allocations: 16050)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:30:18 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 237)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 10583)
+Completed 200 OK in 39ms (Views: 23.9ms | ActiveRecord: 7.4ms | Allocations: 16259)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:30:21 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.8ms | Allocations: 1823)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 12511)
+Completed 200 OK in 43ms (Views: 26.1ms | ActiveRecord: 5.6ms | Allocations: 16598)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:31:06 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 747.6ms | Allocations: 59563)
+Completed 200 OK in 750ms (Views: 748.3ms | ActiveRecord: 0.0ms | Allocations: 60022)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:32:10 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 715.3ms | Allocations: 60432)
+Completed 200 OK in 717ms (Views: 715.9ms | ActiveRecord: 0.0ms | Allocations: 60891)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:32:12 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.3ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 12490)
+Completed 200 OK in 40ms (Views: 24.1ms | ActiveRecord: 5.3ms | Allocations: 16016)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:32:52 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 707.7ms | Allocations: 60818)
+Completed 200 OK in 710ms (Views: 708.5ms | ActiveRecord: 0.0ms | Allocations: 61276)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:32:56 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 5.0ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 12496)
+Completed 200 OK in 53ms (Views: 31.3ms | ActiveRecord: 8.1ms | Allocations: 16021)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:33:59 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 761.8ms | Allocations: 60425)
+Completed 200 OK in 766ms (Views: 763.5ms | ActiveRecord: 0.0ms | Allocations: 60883)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:34:01 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.6ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 12492)
+Completed 200 OK in 45ms (Views: 22.9ms | ActiveRecord: 7.7ms | Allocations: 16014)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:35:44 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 542.7ms | Allocations: 32132)
+Completed 500 Internal Server Error in 546ms (ActiveRecord: 0.0ms | Allocations: 32563)
+
+
+  
+ActionView::Template::Error (Error: Mixin box-sizing is missing argument $boxmodel.
+        on line 123:14 of app/assets/stylesheets/custom.scss
+>>     @include box_sizing;
+
+   -------------^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:     <%= render "layouts/shim"%>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:123
+app/views/layouts/application.html.erb:9
+Started GET "/signup" for ::1 at 2023-03-09 18:35:52 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 718.5ms | Allocations: 59861)
+Completed 200 OK in 721ms (Views: 719.5ms | ActiveRecord: 0.0ms | Allocations: 60320)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:35:53 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.8ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 12490)
+Completed 200 OK in 55ms (Views: 27.8ms | ActiveRecord: 9.3ms | Allocations: 16012)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:37:20 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 703.2ms | Allocations: 60374)
+Completed 200 OK in 706ms (Views: 704.2ms | ActiveRecord: 0.0ms | Allocations: 60833)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:37:22 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.0ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 12490)
+Completed 200 OK in 50ms (Views: 30.3ms | ActiveRecord: 7.0ms | Allocations: 16011)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:42:15 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 237)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 10750)
+Completed 200 OK in 40ms (Views: 23.0ms | ActiveRecord: 8.0ms | Allocations: 16420)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:42:16 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.7ms | Allocations: 1823)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 12521)
+Completed 200 OK in 43ms (Views: 29.1ms | ActiveRecord: 4.6ms | Allocations: 16584)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:42:41 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"phong", "email"=>"phong@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'phong@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`) VALUES ('phong', 'phong@gmail.com', '2023-03-09 11:42:41.317592', '2023-03-09 11:42:41.317592', '$2a$12$jjvI9CDkjuFZ0bRMurLtbemoX3iz3ge8h6NJgdquyquEp.EjucDFu')[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (258.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 545ms (ActiveRecord: 261.6ms | Allocations: 4404)
+
+
+Started GET "/users/4" for ::1 at 2023-03-09 18:42:41 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 7789)
+Completed 200 OK in 34ms (Views: 15.4ms | ActiveRecord: 1.6ms | Allocations: 9294)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:42:45 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 43)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 8594)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 9120)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:42:47 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"phong", "email"=>"phong@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'phong@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 2.9ms | Allocations: 1052)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 10618)
+Completed 200 OK in 39ms (Views: 23.8ms | ActiveRecord: 5.4ms | Allocations: 14293)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:43:20 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 747.0ms | Allocations: 60091)
+Completed 200 OK in 749ms (Views: 748.1ms | ActiveRecord: 0.0ms | Allocations: 60546)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:43:22 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.9ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 12504)
+Completed 200 OK in 46ms (Views: 27.5ms | ActiveRecord: 5.6ms | Allocations: 16022)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:44:09 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 712.4ms | Allocations: 60403)
+Completed 200 OK in 717ms (Views: 713.6ms | ActiveRecord: 0.0ms | Allocations: 60857)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:44:12 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.2ms | Allocations: 1809)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 12561)
+Completed 200 OK in 44ms (Views: 26.0ms | ActiveRecord: 5.6ms | Allocations: 16087)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:44:16 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 8516)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 8970)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:50:11 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 10637)
+Completed 200 OK in 31ms (Views: 29.1ms | Allocations: 12032)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:50:13 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.5ms | Allocations: 1835)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 5334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 12498)
+Completed 200 OK in 46ms (Views: 24.5ms | ActiveRecord: 7.6ms | Allocations: 16524)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:50:21 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 236)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 282)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 10568)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.0ms | Allocations: 11931)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:50:22 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 8481)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 8992)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:50:23 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.3ms | Allocations: 1835)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 5334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 12499)
+Completed 200 OK in 45ms (Views: 27.6ms | ActiveRecord: 5.8ms | Allocations: 16192)
+
+
+Started POST "/signup" for ::1 at 2023-03-09 18:50:35 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"phong", "email"=>"haiphong.huynh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'haiphong.huynh@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`) VALUES ('phong', 'haiphong.huynh@gmail.com', '2023-03-09 11:50:35.286358', '2023-03-09 11:50:35.286358', '$2a$12$hrHqcbF3Y/R/ubx/qVJgbO1FllLYBxDLPXGA.I1K/HIQi4UhWoDNG')[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (71.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 346ms (ActiveRecord: 75.3ms | Allocations: 3916)
+
+
+Started GET "/users/5" for ::1 at 2023-03-09 18:50:35 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 7468)
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 2.4ms | Allocations: 8667)
+
+
+Started GET "/users/5" for ::1 at 2023-03-09 18:50:41 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 7345)
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 3.1ms | Allocations: 8397)
+
+
+Started GET "/signup" for ::1 at 2023-03-09 18:50:43 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 8485)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 8940)
+
+
