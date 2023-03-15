@@ -3426,3 +3426,738 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 1.1ms | Allocations: 11237)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('6019767684805735455', 0)[0m
+  [1m[35m (47.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddRememberDigestToUsers (20230315062455)
+  [1m[35m (595.7ms)[0m  [1m[35mALTER TABLE `users` ADD `remember_digest` varchar(255)[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (102.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230315062455')[0m
+  [1m[36mTRANSACTION (140.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (182.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('6019767684805735455')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2023-03-15 13:46:47 +0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1998.9ms | Allocations: 64630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 122)
+  Rendered layouts/_header.html.erb (Duration: 63.5ms | Allocations: 475)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 2246.5ms | Allocations: 86372)
+Completed 200 OK in 2297ms (Views: 2279.6ms | ActiveRecord: 0.0ms | Allocations: 90056)
+
+
+Started GET "/" for ::1 at 2023-03-15 13:46:50 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 9012)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 9500)
+
+
+Started GET "/" for ::1 at 2023-03-15 13:47:00 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 8280)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 9280)
+
+
+Started GET "/login" for ::1 at 2023-03-15 13:47:05 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 132.2ms | Allocations: 3482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 158.5ms | Allocations: 11086)
+Completed 200 OK in 167ms (Views: 163.6ms | ActiveRecord: 0.0ms | Allocations: 12318)
+
+
+Started GET "/login" for ::1 at 2023-03-15 13:48:11 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 8713)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms | Allocations: 9535)
+
+
+Started POST "/login" for ::1 at 2023-03-15 13:48:20 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"phong@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'phong@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 150)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 8566)
+Completed 200 OK in 466ms (Views: 13.0ms | ActiveRecord: 20.0ms | Allocations: 16534)
+
+
+Started GET "/signup" for ::1 at 2023-03-15 13:48:29 +0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 11.6ms | Allocations: 245)
+  Rendered users/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 2554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 164)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 10143)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 12004)
+
+
+Started POST "/signup" for ::1 at 2023-03-15 13:48:40 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"phong", "email"=>"phong@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'phong@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 696)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2498)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 9754)
+Completed 200 OK in 291ms (Views: 18.3ms | ActiveRecord: 2.5ms | Allocations: 14134)
+
+
+Started POST "/signup" for ::1 at 2023-03-15 13:48:53 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"phong", "email"=>"phong1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'phong1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`) VALUES ('phong', 'phong1@gmail.com', '2023-03-15 06:48:54.163624', '2023-03-15 06:48:54.163624', '$2a$12$iXvowCDUPFrdrYbhFFWWO.K72hu5HHWWBRkJEAAagD8lHa7yVl1dC')[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (110.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 390ms (ActiveRecord: 113.5ms | Allocations: 4406)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:48:54 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 54.7ms | Allocations: 2436)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 906)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 10643)
+Completed 200 OK in 78ms (Views: 70.5ms | ActiveRecord: 1.9ms | Allocations: 12008)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-15 13:48:58 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.2ms | Allocations: 3539)
+
+
+  
+NoMethodError (private method `forget' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>):
+  
+app/helpers/sessions_helper.rb:40:in `forget'
+app/helpers/sessions_helper.rb:26:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started GET "/users/7" for ::1 at 2023-03-15 13:52:05 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 991)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8667)
+Completed 200 OK in 43ms (Views: 21.8ms | ActiveRecord: 8.4ms | Allocations: 15101)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-15 13:52:08 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms | Allocations: 3555)
+
+
+  
+NoMethodError (private method `forget' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>):
+  
+app/helpers/sessions_helper.rb:34:in `forget'
+app/helpers/sessions_helper.rb:40:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started GET "/users/7" for ::1 at 2023-03-15 13:52:55 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 97)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 811)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8352)
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 1.8ms | Allocations: 9449)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:52:56 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 768)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 8059)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 2.9ms | Allocations: 9251)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:52:58 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 767)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 8057)
+Completed 200 OK in 28ms (Views: 20.4ms | ActiveRecord: 2.9ms | Allocations: 9111)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:52:59 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 767)
+  Rendered layouts/_footer.html.erb (Duration: 6.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 8058)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 1.7ms | Allocations: 9113)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:52:59 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 767)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 8062)
+Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 2.7ms | Allocations: 9119)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:53:01 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 767)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 8637)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 2.4ms | Allocations: 9691)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:53:02 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 767)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 8646)
+Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 2.3ms | Allocations: 9701)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 13:53:03 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 767)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 8062)
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 2.4ms | Allocations: 9116)
+
+
+Started GET "/ogin" for ::1 at 2023-03-15 13:53:08 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/ogin"):
+  
+Started GET "/login" for ::1 at 2023-03-15 13:53:12 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.8ms | Allocations: 1157)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 9856)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 3.1ms | Allocations: 10554)
+
+
+Started POST "/login" for ::1 at 2023-03-15 13:53:23 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"phong1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'phong1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 2.2ms | Allocations: 4079)
+
+
+  
+NoMethodError (private method `remember' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>
+Did you mean?  remember_token):
+  
+app/helpers/sessions_helper.rb:27:in `remember'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2023-03-15 13:54:44 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"phong1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'phong1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 7.6ms | Allocations: 8965)
+
+
+  
+NoMethodError (private method `remember' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>
+Did you mean?  remember_token):
+  
+app/helpers/sessions_helper.rb:27:in `remember'
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/login" for ::1 at 2023-03-15 13:54:46 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 1404)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 10104)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 1.5ms | Allocations: 10841)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-15 13:54:49 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.5ms | Allocations: 3385)
+
+
+  
+NoMethodError (private method `forget' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>):
+  
+app/helpers/sessions_helper.rb:34:in `forget'
+app/helpers/sessions_helper.rb:40:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started GET "/login" for ::1 at 2023-03-15 13:54:52 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.9ms | Allocations: 1027)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 9308)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 2.3ms | Allocations: 9766)
+
+
+Started POST "/login" for ::1 at 2023-03-15 13:54:58 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"phong1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'phong1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 2.5ms | Allocations: 3331)
+
+
+  
+NoMethodError (private method `forget' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>):
+  
+app/helpers/sessions_helper.rb:34:in `forget'
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/login" for ::1 at 2023-03-15 13:55:01 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 39)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.4ms | Allocations: 1027)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 9308)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 2.7ms | Allocations: 9752)
+
+
+Started GET "/login" for ::1 at 2023-03-15 13:55:08 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 1025)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 9195)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 1.7ms | Allocations: 9638)
+
+
+Started GET "/login" for ::1 at 2023-03-15 14:04:53 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 39)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 84.5ms | Allocations: 1363)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 364.8ms | Allocations: 9637)
+Completed 200 OK in 467ms (Views: 366.9ms | ActiveRecord: 4.5ms | Allocations: 10092)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:04:58 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.7ms | Allocations: 882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.6ms | Allocations: 1187)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 9340)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 2.3ms | Allocations: 10103)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:15:57 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 332.1ms | Allocations: 12382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 118)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 81.0ms | Allocations: 8714)
+  Rendered layouts/_footer.html.erb (Duration: 1.7ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 458.7ms | Allocations: 29897)
+Completed 200 OK in 475ms (Views: 456.0ms | ActiveRecord: 6.4ms | Allocations: 33692)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-15 14:16:04 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.2ms | Allocations: 3778)
+
+
+  
+NoMethodError (private method `forget' called for #<User id: 7, name: "phong", email: "phong1@gmail.com", created_at: "2023-03-15 06:48:54.163624000 +0000", updated_at: "2023-03-15 06:48:54.163624000 +0000", password_digest: [FILTERED], remember_digest: nil>):
+  
+app/helpers/sessions_helper.rb:34:in `forget'
+app/helpers/sessions_helper.rb:40:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started GET "/" for ::1 at 2023-03-15 14:16:06 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 1155)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 9201)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 1.8ms | Allocations: 9737)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-15 14:23:06 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 2.1ms | Allocations: 6853)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:06 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 179)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8389)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 9160)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:10 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 8449)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 8939)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:12 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 7888)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 8333)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7888)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 8333)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 57.4ms | Allocations: 7889)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.0ms | Allocations: 8335)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:14 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.8ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 8021)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms | Allocations: 8474)
+
+
+Started GET "/login" for ::1 at 2023-03-15 14:23:18 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 75.4ms | Allocations: 2627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 108.3ms | Allocations: 10230)
+Completed 200 OK in 113ms (Views: 111.3ms | ActiveRecord: 0.0ms | Allocations: 11367)
+
+
+Started GET "/login" for ::1 at 2023-03-15 14:23:18 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 998)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 9093)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 9597)
+
+
+Started POST "/login" for ::1 at 2023-03-15 14:23:29 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"phong1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'phong1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:29:in `remember'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'phong1@gmail.com' AND `users`.`id` != 7 LIMIT 1[0m
+  ↳ app/models/user.rb:29:in `remember'
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE `users` SET `users`.`updated_at` = '2023-03-15 07:23:29.977040', `users`.`remember_digest` = '$2a$12$WbgrPIGR45fZB8KRZteXb.wbGK7c4ZVD2O6H1FeJHBNDZNrSmhVlS' WHERE `users`.`id` = 7[0m
+  ↳ app/models/user.rb:29:in `remember'
+  [1m[36mTRANSACTION (55.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:29:in `remember'
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 615ms (ActiveRecord: 61.7ms | Allocations: 6021)
+
+
+Started GET "/users/7" for ::1 at 2023-03-15 14:23:30 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 124.8ms | Allocations: 367)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 922)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 183.5ms | Allocations: 8887)
+Completed 200 OK in 192ms (Views: 185.8ms | ActiveRecord: 1.7ms | Allocations: 10815)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-15 14:23:33 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:37:in `forget'
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`updated_at` = '2023-03-15 07:23:33.628224', `users`.`remember_digest` = NULL WHERE `users`.`id` = 7[0m
+  ↳ app/models/user.rb:37:in `forget'
+  [1m[36mTRANSACTION (48.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:37:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 56.9ms | Allocations: 3502)
+
+
+Started GET "/" for ::1 at 2023-03-15 14:23:33 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 7900)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 8371)
+
+
