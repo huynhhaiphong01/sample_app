@@ -5,17 +5,17 @@ class User < ApplicationRecord
     validates :email, presence: true, length: {maximum: 50},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: true
     validates :name, presence: true, length: {maximum: 50}
-
+    #validates :password, presence: true, length: {minimum: Settings.digits.digit_6}, allow_nil:true
     has_secure_password
    
 
     class << self
         def digest string
-            cost = if ActiveModel::SecurePassword.min_cost
-              BCrypt::Engine::MIN_COST
-            else
-              BCrypt::Engine.cost
-            end
+        cost = if ActiveModel::SecurePassword.min_cost
+                    BCrypt::Engine::MIN_COST
+               else
+                    BCrypt::Engine.cost
+               end
             BCrypt::Password.create string, cost: cost
         end
 
